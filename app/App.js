@@ -1,8 +1,15 @@
 import React from 'react';
-
 import 'normalize.css';
+import '@progress/kendo-theme-material/dist/all.css';
 import './App.scss';
+import Frame from './Frame';
+import { AppProvider } from './context/AppContext';
 
-const App = () => <h1>Hello React</h1>;
-
+const App = () => {
+    return(
+      <AppProvider>
+        <Frame />
+      </AppProvider>
+    )
+  };
 export default App;
